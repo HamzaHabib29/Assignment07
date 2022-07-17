@@ -154,48 +154,44 @@
 //     }
 
 //     if (number && (alpaUpper || alpaLower)) {
-//       document.write("password is valid");
+//       document.write("Password is valid");
 //     } else {
-//       document.write("Invalid Paswword");
+//       document.write("Password must contain alphabets and numbers");
 //     }
 //   }
 // } else {
 //   document.write("Password must be 6 character long");
 // }
 
-var password = prompt("Enter Password");
-var num = false;
-var upper = false;
-var lower = false;
+// Task 16
+// var university = "University of Karachi";
+// var spliting = university.split('');
 
-if (password.length >= 6) {
-  if (!password.charCodeAt(0) >= 48 && !password.charCodeAt(0) <= 57) {
-    for (var i = 0; i <= password.length; i++) {
-      if (password.charCodeAt(i) >= 48 && password.charCodeAt(i) <= 57) {
-        num = true;
-      } else if (password.charCodeAt(i) >= 65 && password.charCodeAt(i) <= 90) {
-        upper = true;
-      } else if (
-        password.charCodeAt(i) >= 97 &&
-        password.charCodeAt(i) <= 122
-      ) {
-        lower = true;
-      }
-    }
-  } else {
-    document.write("Entered Password: " + password + "<br>");
-    document.write("Password can not begin with a number" + "<br>");
-    document.write("Please enter a valid password");
-  
-  }
+// for(var i = 0; i < spliting.length; i++){
+//   document.write(spliting[i] + "<br>")
+// }
 
-  if (num && (upper || lower)) {
-    document.write("Entered Password: " + password + "<br>");
-    document.write("Password is valid");
-  } else {
-    document.write("Password must contain Alphabets and numbers");
+// Task 17
+// var input = prompt("Enter sentence")
+// document.write("User input: " + input + "<br>");
+// document.write("Last Character of input: " + input.charAt(input.length - 1))
+
+// Task 18
+var string = "The quick brown fox jumps over the lazy dog";
+var find = "the";
+var split = string.split(" ");
+
+var count = 0;
+
+for (var i = 0; i < split.length; i++) {
+  if (split[i] === find) {
+    count++;
   }
-} else {
-  document.write("Entered Password: " + password + "<br>");
-  document.write("Password must at least 6 characters long");
 }
+
+if(count === 0){
+  document.write("Word not found <br>")
+}
+
+document.write("Text: " + string + "<br>")
+document.write("There are " + count + " occurrence of word " + "'" + find + "'")
